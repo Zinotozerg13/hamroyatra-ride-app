@@ -10,7 +10,10 @@ const rideRoutes=require('./router/ride.routes');
 const captainRoutes=require('./router/captain.routes');
 const app=express();
 app.use(cookieParser());
- app.use(cors());
+ app.use(cors({
+  origin: ['http://localhost:5173', 'https://your-frontend-domain.com'],
+  credentials: true,
+}));
  app.use(express.json());
  app.use(express.urlencoded({extended:true}));
  connectToDB();
