@@ -14,7 +14,7 @@ import WaitingForDriver from '../components/WaitingForDriver';
 import { UserDataContext } from '../context/UserContext';
 import { useNavigate } from 'react-router-dom';
 import LiveTracking from '../components/LiveTracking';
-import { set } from 'mongoose';
+
 const Home = () => {
   const vehicleFoundRef = useRef(null)
    const [pickup, setPickup] = useState('')
